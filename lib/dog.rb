@@ -60,9 +60,7 @@ class Dog
       LIMIT 1
     SQL
 
-    dog_info = DB[:conn].execute(sql, id).map do |row|
-      self.new_from_db(row)
-    end
+    dog_info = DB[:conn].execute(sql, id)
     new_from_db(dog_info)
   end
 
