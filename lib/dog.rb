@@ -60,7 +60,7 @@ class Dog
       LIMIT 1
     SQL
 
-    dog_info = DB[:conn].execute(sql, id)
+    dog_info = DB[:conn].execute(sql, id).first
     new_from_db(dog_info)
   end
 
